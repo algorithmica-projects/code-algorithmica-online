@@ -420,64 +420,17 @@ const config = {
       navbar: {
         logo: {
           href: '/',
-          src: '/logo/light.svg',
-          srcDark: '/logo/dark.svg',
-          alt: 'Dyte Docs',
-          height: '40px',
-          width: '101px',
+          src: 'https://algorithmicaonline.com/images/logo.png',
+          srcDark: 'https://algorithmicaonline.com/images/logo.png',
+          alt: 'Algorithmica',
+          height: '60px',
+          width: '80px',
         },
         items: [
-          {
-            label: 'Guides',
-            to: 'guides',
-            className: 'guides-top-header',
-          },
-          {
-            label: 'SDKs',
-            type: 'dropdown',
-            className: 'dyte-dropdown',
-            items: [
-              {
-                type: 'html',
-                value: sdksHTML,
-                className: 'dyte-dropdown',
-              },
-            ],
-          },
-          {
-            label: 'REST API',
-            to: '/api/',
-          },
-          {
-            label: 'Resources',
-            type: 'dropdown',
-            className: 'dyte-dropdown resources-dropdown',
-            items: [
-              {
-                type: 'html',
-                value: resourcesHTML,
-                className: 'dyte-dropdown',
-              },
-            ],
-          },
-          {
-            label: 'Support',
-            to: 'https://dyte.io/contact',
-          },
 
           {
-            type: 'search',
-            position: 'right',
-          },
-          {
-            label: 'Book a demo',
-            href: 'https://dyte.io/schedule-demo',
-            position: 'right',
-            className: 'navbar-book-demo',
-          },
-          {
             label: 'Sign Up',
-            href: 'https://dev.dyte.io/register',
+            href: '#',
             position: 'right',
             className: 'dev-portal-signup dev-portal-link',
           },
