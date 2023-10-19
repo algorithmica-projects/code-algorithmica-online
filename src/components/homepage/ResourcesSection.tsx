@@ -6,7 +6,11 @@ import {
   ChevronLeftRegular,
   ChevronRightRegular,
 } from '@fluentui/react-icons';
+import { title } from 'process';
 
+interface subResource {
+
+}
 interface Resource {
   url: string;
   type: string;

@@ -163,80 +163,59 @@ export default function Footer() {
   return (
     <footer className="bg-[#F4F7FF]">
       <div className="mx-auto flex w-full max-w-[1080px] flex-col px-6 py-12">
-        <div className="mb-12 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <img src="/logo/dyte.svg" alt="Dyte" className="h-9 w-fit lg:h-12" />
+      
 
-          <Safety className="hidden lg:flex" />
-          <BrowserOnly>
-            {() => {
-              return <Status className="lg:hidden" />;
-            }}
-          </BrowserOnly>
-        </div>
-
-        <div className="grid grid-cols-2 gap-6 gap-y-12 md:justify-between lg:flex lg:flex-wrap">
-          <Links name="Product" links={products} />
-          <Links name="Developers" links={developers} />
-          <Links name="Usecases" links={usecases} />
-          <Links name="Company" links={company} />
-          <Links name="Compare" links={comparisons} />
-        </div>
-
-        <hr className="my-12 !bg-gray-300" />
+      
 
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-0">
-          <BrowserOnly>
-            {() => {
-              return <Status className="hidden lg:flex" />;
-            }}
-          </BrowserOnly>
+
           <Safety className="flex w-full max-w-full lg:hidden" />
 
           <div className="flex flex-wrap gap-2 text-sm text-gray-500">
             <Link
-              href="https://dyte.io/privacy-policy"
+              href="#"
               className="text-inherit hover:text-black hover:underline"
             >
               Privacy Policy
             </Link>
             &bull;
             <Link
-              href="https://dyte.io/terms-of-service"
+              href="#"
               className="text-inherit hover:text-black hover:underline"
             >
               Terms of Service
             </Link>
             &bull;
             <Link
-              href="https://dyte.io/website-terms-of-use"
+              href="#"
               className="text-inherit hover:text-black hover:underline"
             >
               Website Terms of Use
             </Link>
             &bull;
             <span className="text-inherit">
-              &copy; {new Date().getFullYear()} Dyte Inc.
+              &copy; {new Date().getFullYear()} Algorithimc.
             </span>
           </div>
 
           <div className="flex items-center gap-4">
             <Link
-              href="https://github.com/dyte-io"
+              href="#"
               aria-label="Dyte's GitHub Organization"
             >
               <Github className="h-7 w-7 text-zinc-400 hover:text-primary" />
             </Link>
             <Link
-              href="https://linkedin.com/company/dyteio"
+              href="#"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-7 w-7 text-zinc-400 hover:text-primary" />
             </Link>
-            <Link href="https://twitter.com/dyte_io" aria-label="Twitter">
+            <Link href="#" aria-label="Twitter">
               <XIcon className="h-7 w-7 text-zinc-400 hover:text-primary" />
             </Link>
             <Link
-              href="https://youtube.com/company/dyteio"
+              href="#"
               aria-label="Dyte YouTube Channel"
             >
               <Youtube className="h-7 w-7 text-zinc-400 hover:text-primary" />

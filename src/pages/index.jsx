@@ -28,7 +28,7 @@ export default function Homepage() {
       
       <ResourcesSection />
  
-
+      <HomeFooter />
       {/* 
 
       <GuidesAndSamples />
@@ -44,7 +44,7 @@ export default function Homepage() {
 
 
 
-      <HomeFooter /> */}
+       */}
     </Layout>
   );
 }
