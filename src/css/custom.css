@@ -85,6 +85,13 @@
   .no-underline-links {
     --ifm-link-hover-decoration: none;
   }
+  .bg-img{
+    background-image: url('https://algorithmicaonline.s3.ap-south-1.amazonaws.com/algorithmica-online-banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+    height: 500px;
+  }
 
   a {
     @apply cursor-pointer;

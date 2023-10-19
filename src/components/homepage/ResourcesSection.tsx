@@ -20,47 +20,47 @@ const ALL_RESOURCES: Resource[] = [
   {
     url: '/guides/v2-migration-guide',
     type: 'blog',
-    title: 'Migrate to v2 REST API',
+    title: 'Python in-depth',
     description:
-      'Excited to announce the release of our v2 REST APIs, which are faster, more idiomatic, and easier to use.',
+      'Some info regarding course and its contents',
     image:
-      'https://dyte.io/blog/content/images/size/w1000/2023/02/Dyte-Blog---v2-APIs.jpg',
+      'https://algorithmicaonline.com/images/course/1596793516TOP 20 ADVANCED JAVA.png',
     duration: '3 min',
   },
   {
     url: 'https://dyte.io/blog/hls-in-depth/',
     type: 'blog',
-    title: 'HLS in Depth',
+    title: 'Angular basics',
     description:
-      "HLS is widely adopted, simple, yet robust. Learn how it works from a client's perspective, its segments, features, and disadvantages.",
+      "Some info regarding course and its contents",
     image:
-      'https://dyte.io/blog/content/images/size/w1000/2023/07/HLS--indepth--header--1.png',
+      'https://algorithmicaonline.com/images/course/1596570363TOP 20 ADVANCED PYTHON.png',
     duration: '10 min',
   },
   {
     url: 'https://www.youtube.com/watch?v=eVUqkNNHh1o',
     type: 'video',
-    title: 'Integrating React UI Kit',
+    title: 'Get started with react',
     description:
-      'In this video learn how to use React UI Kit prebuilt components to add live video and audio to your React application.',
-    image: 'https://img.youtube.com/vi/eVUqkNNHh1o/hqdefault.jpg',
+      'Some info regarding course and its contents',
+    image: 'https://algorithmicaonline.com/images/course/1596570363TOP 20 ADVANCED PYTHON.png',
     duration: '5 min',
   },
   {
     url: 'https://www.youtube.com/watch?v=ZkrZc8Neh6A',
     type: 'video',
-    title: 'Video KYC App using React UI Kit',
+    title: 'demo1',
     description:
-      'In this episode of Dyte Byte we show how to build Video KYC App using React UI Kit.',
-    image: 'https://img.youtube.com/vi/ZkrZc8Neh6A/hqdefault.jpg',
+      'Some info regarding course and its contents',
+    image: 'https://algorithmicaonline.com/images/course/1596570363TOP 20 ADVANCED PYTHON.png',
     duration: '5 min',
   },
   {
     url: 'https://www.youtube.com/watch?v=UHuzWDxrvLk',
     type: 'video',
-    title: 'Calling Dyte REST APIs',
-    description: 'Understand our HTTP REST APIs',
-    image: 'https://img.youtube.com/vi/UHuzWDxrvLk/hqdefault.jpg',
+    title: 'demo2',
+    description: 'Some info regarding course and its contents',
+    image: 'https://algorithmicaonline.com/images/course/1596570363TOP 20 ADVANCED PYTHON.png',
     duration: '7 min',
   },
 ];
@@ -132,49 +132,10 @@ export default function ResourcesSection() {
       <div className="mx-auto max-w-5xl">
         <div className="flex items-center justify-between">
           <div>
-            <span className="dyte-badge">RESOURCES</span>
-            <h2 className="mb-6 text-4xl">Want to know more?</h2>
+            <h2 className="mb-6 text-4xl">Data Structures</h2>
           </div>
-          <Link
-            to="https://dyte.io/blog"
-            className="font-jakarta text-sm font-semibold text-primary"
-          >
-            All Blogs <ArrowRightFilled className="ml-1" />
-          </Link>
         </div>
 
-        <div className="mb-6 inline-flex gap-1 rounded-lg bg-secondary-700 p-2 font-jakarta text-sm font-semibold dark:bg-secondary-700">
-          <button
-            className={clsx(
-              'rounded-lg px-4 py-2 transition-colors',
-              activeType === 'all' &&
-                'bg-zinc-700 text-white dark:bg-zinc-200 dark:text-black'
-            )}
-            onClick={() => setActiveType('all')}
-          >
-            All
-          </button>
-          <button
-            className={clsx(
-              'rounded-lg px-4 py-2 transition-colors',
-              activeType === 'blog' &&
-                'bg-zinc-700 text-white dark:bg-zinc-200 dark:text-black'
-            )}
-            onClick={() => setActiveType('blog')}
-          >
-            Blogs
-          </button>
-          <button
-            className={clsx(
-              'rounded-lg px-4 py-2 transition-colors',
-              activeType === 'video' &&
-                'bg-zinc-700 text-white dark:bg-zinc-200 dark:text-black'
-            )}
-            onClick={() => setActiveType('video')}
-          >
-            Videos
-          </button>
-        </div>
 
         <div className="relative flex flex-col">
           <div className="no-underline-links grid grid-cols-3 gap-6 md:grid-cols-2 lg:grid-cols-3">

@@ -22,7 +22,14 @@ export default function Homepage() {
         <link rel="prefetch" href="/assets/css/elements.min.css" />
       </Head>
 
+      <CommunitySection />
+
       <HeroSection />
+      
+      <ResourcesSection />
+ 
+
+      {/* 
 
       <GuidesAndSamples />
 
@@ -35,9 +42,9 @@ export default function Homepage() {
         <HelpSection className="-mb-48" />
       </div>
 
-      <CommunitySection />
 
-      <HomeFooter />
+
+      <HomeFooter /> */}
     </Layout>
   );
 }
