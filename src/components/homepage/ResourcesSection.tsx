@@ -22,7 +22,7 @@ interface Resource {
 
 const ALL_RESOURCES: Resource[] = [
   {
-    url: '/guides/v2-migration-guide',
+    url: '/guides/basics/basics1',
     type: 'blog',
     title: 'Python in-depth',
     description:
