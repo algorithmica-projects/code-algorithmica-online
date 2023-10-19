@@ -21,6 +21,7 @@ interface Resource {
 }
 
 const ALL_RESOURCES: Resource[] = [
+
   {
     url: '/guides/basics/basics1',
     type: 'blog',
@@ -41,33 +42,8 @@ const ALL_RESOURCES: Resource[] = [
       'https://algorithmicaonline.com/images/course/1596570363TOP 20 ADVANCED PYTHON.png',
     duration: '10 min',
   },
-  {
-    url: 'https://www.youtube.com/watch?v=eVUqkNNHh1o',
-    type: 'video',
-    title: 'Get started with react',
-    description:
-      'Some info regarding course and its contents',
-    image: 'https://algorithmicaonline.com/images/course/1596570363TOP 20 ADVANCED PYTHON.png',
-    duration: '5 min',
-  },
-  {
-    url: 'https://www.youtube.com/watch?v=ZkrZc8Neh6A',
-    type: 'video',
-    title: 'demo1',
-    description:
-      'Some info regarding course and its contents',
-    image: 'https://algorithmicaonline.com/images/course/1596570363TOP 20 ADVANCED PYTHON.png',
-    duration: '5 min',
-  },
-  {
-    url: 'https://www.youtube.com/watch?v=UHuzWDxrvLk',
-    type: 'video',
-    title: 'demo2',
-    description: 'Some info regarding course and its contents',
-    image: 'https://algorithmicaonline.com/images/course/1596570363TOP 20 ADVANCED PYTHON.png',
-    duration: '7 min',
-  },
 ];
+
 
 function Resource({
   type,
@@ -115,9 +91,9 @@ export default function ResourcesSection() {
       ? ALL_RESOURCES
       : ALL_RESOURCES.filter((r) => r.type === activeType);
 
-  const currentResources = resources.slice((page - 1) * 3, page * 3);
+  const currentResources = resources.slice((page - 1) * 4, page * 4);
 
-  const pages = Math.ceil(resources.length / 3);
+  const pages = Math.ceil(resources.length / 4);
 
   const nextPage = () => {
     if (page < pages) {
@@ -132,17 +108,19 @@ export default function ResourcesSection() {
   };
 
   return (
-    <section className="no-underline-links my-20 px-6">
-      <div className="mx-auto max-w-5xl">
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 className="mb-6 text-4xl">Data Structures</h2>
-          </div>
+    <section className="no-underline-links my-20 px-6" >
+      <div className="mx-auto max-w-7xl">
+        <div className="">
+        <h4 className="mb-2 text-2xl">Data structures & algorithms</h4>
+
+        <p className="mb-6 text-text-400">
+         Some demo paragraph regarding data structures and algoritms
+        </p>
         </div>
 
 
         <div className="relative flex flex-col">
-          <div className="no-underline-links grid grid-cols-3 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="no-underline-links grid grid-cols-3 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {currentResources.map((resource, idx) => {
               return <Resource {...resource} key={idx} />;
             })}

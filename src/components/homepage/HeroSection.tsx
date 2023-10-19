@@ -33,16 +33,7 @@ const PRODUCTS = [
     lightImage: '/static/landing-page/hero/livestream-graphic.png',
     darkImage: '/static/landing-page/hero/livestream-graphic-dark.png',
     text: 'Some demo paragraph describing regarding courses and some title cards with some basic information',
-  },
-  {
-    title: 'Indepth algorithm couress',
-    beta: true,
-    link: '/guides/realtime-chat/intro-chat',
-    icon: ChatMultipleRegular,
-    lightImage: '/static/landing-page/hero/chat-graphic.png',
-    darkImage: '/static/landing-page/hero/chat-graphic-dark.png',
-    text: 'Some demo paragraph describing regarding courses and some title cards with some basic information',
-  },
+  }
 ];
 
 function HeroProduct({
@@ -57,7 +48,7 @@ function HeroProduct({
   return (
     <Link
       style={{
-        borderWidth: '1px',
+        borderWidth: '1px'
       }}
       className={clsx(
         'group relative cursor-pointer overflow-clip rounded-3xl from-primary/30 via-transparent to-transparent text-black transition-all hover:bg-gradient-to-tr hover:text-primary hover:no-underline dark:text-white',
@@ -94,10 +85,16 @@ export default function HeroSection() {
           <h2 className="mb-4 font-jakarta text-5xl font-bold">
             Algorithic Online
           </h2>
+          <p className="max-w-xl text-center text-text-400">
+            At Dyte, we're building the future of real-time communication.
+            Integrate programmable, and easily customizable live video and voice
+            into your web, mobile, and desktop applications with just a few
+            lines of code.
+          </p>
         </div>
       </section>
 
-      <section className="mx-auto grid w-full max-w-5xl grid-cols-1 grid-rows-2 gap-6 px-4 md:grid-cols-2">
+      <section className="mx-auto grid w-full max-w-8xl grid-cols-1  gap-6 px-4 md:grid-cols-3">
         {PRODUCTS.map((product) => (
           <HeroProduct {...product} key={product.title} />
         ))}
