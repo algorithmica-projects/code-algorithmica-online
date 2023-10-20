@@ -23,7 +23,7 @@ interface Resource {
 const DSA_RESOURCES: Resource[] = [
 
   {
-    url: '/guides/basics/basics1',
+    url: '/dsa-level-0/basics/basics1',
     type: 'blog',
     title: 'DSA-Level-0',
     description:
@@ -33,7 +33,7 @@ const DSA_RESOURCES: Resource[] = [
     duration: '3 min',
   },
   {
-    url: '/guides/basics/basics1',
+    url: '/dsa-level-1/basics/basics1',
     type: 'blog',
     title: 'DSA-Level-1',
     description:
@@ -43,7 +43,7 @@ const DSA_RESOURCES: Resource[] = [
     duration: '10 min',
   },
   {
-    url: '/guides/basics/basics1',
+    url: '/dsa-level-1/basics/basics1',
     type: 'blog',
     title: 'DSA-Level-2',
     description:
@@ -53,7 +53,7 @@ const DSA_RESOURCES: Resource[] = [
     duration: '10 min',
   },
   {
-    url: '/guides/basics/basics1',
+    url: '/dsa-level-1/basics/basics1',
     type: 'blog',
     title: 'DSA-Level-3',
     description:
@@ -63,7 +63,7 @@ const DSA_RESOURCES: Resource[] = [
     duration: '10 min',
   },
   {
-    url: '/guides/basics/basics1',
+    url: '/dsa-level-1/basics/basics1',
     type: 'blog',
     title: 'DSA-Level-4',
     description:
@@ -76,7 +76,7 @@ const DSA_RESOURCES: Resource[] = [
 const AI_RESOURCES: Resource[] = [
 
   {
-    url: '/guides/basics/basics1',
+    url: '/dsa/dsa-level-0/basics2',
     type: 'blog',
     title: 'AI-ML-1',
     description:
@@ -86,7 +86,7 @@ const AI_RESOURCES: Resource[] = [
     duration: '3 min',
   },
   {
-    url: '/guides/basics/basics1',
+    url: '/dsa/dsa-level-0/basics2',
     type: 'blog',
     title: 'AI-ML-2',
     description:

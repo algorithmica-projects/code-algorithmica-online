@@ -194,7 +194,7 @@ export default function Footer() {
             </Link>
             &bull;
             <span className="text-inherit">
-              &copy; {new Date().getFullYear()} Algorithimc.
+              &copy; {new Date().getFullYear()} Algorithimica Online.
             </span>
           </div>
 
