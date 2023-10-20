@@ -5,11 +5,11 @@ const code_themes = {
 
 /** @type {import('@docusaurus/types').Config} */
 const meta = {
-  title: 'Dyte Docs',
-  tagline: 'Real-time audio & video SDKs, ready to launch 🚀',
-  url: 'https://docs.dyte.io',
+  title: 'Algorthamica',
+  tagline: 'Online learning platform',
+  url: 'https://www.google.com',
   baseUrl: '/',
-  favicon: '/favicon.ico',
+  favicon: 'https://algorithmicaonline.com/images/logo.png',
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -439,9 +439,9 @@ const config = {
       footer: {
         logo: {
           href: '/',
-          src: '/logo/light.svg',
-          srcDark: '/logo/dark.svg',
-          alt: 'Dyte Docs',
+          src: 'https://algorithmicaonline.com/images/logo.png',
+          srcDark: 'https://algorithmicaonline.com/images/logo.png',
+          alt: 'Algorithamica',
           height: '36px',
         },
         links: [
