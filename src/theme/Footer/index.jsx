@@ -21,10 +21,7 @@ export default function FooterWrapper(props) {
         <link rel="stylesheet" href="/assets/css/docsly.min.css" />
       </Head>
 
-      <Docsly
-        publicId="public_vzrAqhBkB7RSYu2xJ73FVYrZDBZwryg2Lkr4mluOpjUbbyp4PqVGZbs35RR6py6U"
-        pathname={pathname}
-      />
+
     </>
   );
 }
