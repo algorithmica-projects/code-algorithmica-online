@@ -82,7 +82,7 @@ export default function Home() {
         <div className="aside">
           {currentVersion === 'v2' && (
             <Link
-              href="/release-notes/rest-api"
+              href="#"
               className="no-underline-links text-xs"
             >
               Release Notes

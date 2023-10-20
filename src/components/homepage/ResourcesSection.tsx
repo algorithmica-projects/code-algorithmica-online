@@ -76,7 +76,7 @@ const DSA_RESOURCES: Resource[] = [
 const AI_RESOURCES: Resource[] = [
 
   {
-    url: '/dsa/dsa-level-0/basics2',
+    url: '/dsa-level-1/basics/basics1',
     type: 'blog',
     title: 'AI-ML-1',
     description:
@@ -86,7 +86,7 @@ const AI_RESOURCES: Resource[] = [
     duration: '3 min',
   },
   {
-    url: '/dsa/dsa-level-0/basics2',
+    url: '/dsa-level-1/basics/basics1',
     type: 'blog',
     title: 'AI-ML-2',
     description:
