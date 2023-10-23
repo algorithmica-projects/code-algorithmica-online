@@ -83,13 +83,10 @@ export default function HeroSection() {
       <section className="noise-bg no-underline-links px-4 pt-16 lg:py-0">
         <div className="flex flex-col items-center justify-between py-14">
           <h2 className="mb-4 font-jakarta text-5xl font-bold">
-            Algorithic Online
+            Algorithamica Online
           </h2>
           <p className="max-w-xl text-center text-text-400">
-            At Dyte, we're building the future of real-time communication.
-            Integrate programmable, and easily customizable live video and voice
-            into your web, mobile, and desktop applications with just a few
-            lines of code.
+Embark on an extraordinary coding odyssey with our groundbreaking course, "DSA to Development - Complete Coding Guide"!  Discover the transformative power of mastering Data Structures and Algorithms (DSA) as you venture towards becoming a Proficient Developer
           </p>
         </div>
       </section>
