@@ -1,0 +1,117 @@
+---
+id: number-theory-and-bs
+title: Number Theory and Binary Search
+sidebar_label: 1. Number Theory and Binary Search
+description: Number Theory and Binary Search practice contest by cyberlabs
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+## Description
+
+- Topics : Number Theory, Binary Search
+- [Link to the contest](https://codeforces.com/contestInvitation/403be2a30c3c4a27382791b091ff1592f23209f9)
+
+## Editorial
+
+:::caution
+
+Don’t read the editorial, if you have not attempted or read the problems. It would hamper your thinking capability, if you do so.
+
+:::
+
+### A. [Find $x^{F(n)}$ mod m](https://codeforces.com/gym/298635/problem/A)
+
+<Tabs
+  defaultValue="problem"
+  values={[
+    { label: 'Problem', value: 'problem' },
+    { label: 'Editorial', value: 'editorial' },
+    { label: 'Code', value: 'code' },
+  ]}
+>
+<TabItem value="problem">
+
+
+Given 3 positive integers - $x$, $n$ and $m$. Find value of $x^{F(n)}$ mod $m$ . <br/>
+The function $F(n)$ is defined as the product of square of primes up to $n$ (inclusive).<br/>
+For eg. $F(5) = 2^2 \cdot 3^2 \cdot 5^2 = 900$ . <br/><br/>
+**Constraints**
+
+- $1 \leq  x,m  \leq  10^9$
+- $2 \leq  n  \leq  10^6$
+
+</TabItem>
+<TabItem value="editorial">
+
+
+Since $n  \leq  10^6$, we need to use sieve of Erasthoneses to find out all the prime numbers from 1 to $n$ in $O(n\cdot\log(\log n))$. <br /><br />
+Also, one could easily observe that the value of $F(n)$ would definitely overflow for larger values of $n$. So, we can't find $F(n)$ directly. <br /><br />
+Here, we can use the property $a^{b \cdot c} = {(a^b)}^c$ . For finding ${a^b} \bmod m$ , use binary exponentation, which works in $O(\log_2 b)$ . <br/>
+
+**Final time complexity**: $O(n \log_2 n)$
+
+</TabItem>
+<TabItem value="code">
+
+
+```cpp
+#include <bits/stdc++.h>
+#define int long long
+
+using namespace std;
+
+const int MAX = 1e6;
+
+int modulo(int a, int b, int n) {
+	// Binar exponentation to calculate a^b in O(log b)
+  int x = 1, y = a;
+  while (b > 0) {
+    if (b % 2 == 1) {
+      x = (x * y) % n;
+    }
+    y = (y * y) % n;
+    b /= 2;
+  }
+  return x % n;
+}
+
+vector<bool> is_prime(MAX + 1, 1);
+void sieve() {
+  is_prime[0] = is_prime[1] = false;
+  int i, j;
+  for (i = 2; i * i <= MAX; i++) {
+    if (is_prime[i]) {
+      for (j = i * i; j <= MAX; j = j + i) is_prime[j] = false;
+    }
+  }
+}
+
+int32_t main() {
+  int x, n, m;
+  cin >> x >> n >> m;
+  sieve();  // pre-compute all the primes
+
+  int prod = x;  // final answer would be stored in prod
+
+  for (int i = 2; i <= n; i++) {
+    if (is_prime[i]) {
+      prod = modulo(prod, i, m);
+      prod = modulo(prod, i, m);
+      // Use the property (a^b)^c = a^(b*c).
+      // Since, directly calculating F(n) first will overflow
+    }
+  }
+  cout << prod;
+  return 0;
+}
+```
+
+</TabItem>
+
+
+</Tabs>
+
+
+
