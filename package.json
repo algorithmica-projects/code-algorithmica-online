@@ -1,6 +1,6 @@
 {
-  "name": "dyte-docs",
-  "version": "1.20.0",
+  "name": "algorithamica-online",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -43,7 +43,9 @@
     "raw-loader": "^4.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-feather": "^2.0.10"
+    "react-feather": "^2.0.10",
+    "rehype-katex": "^4.0.0",
+    "remark-math": "^3.0.1"
   },
   "devDependencies": {
     "@styled-icons/boxicons-logos": "^10.47.0",
