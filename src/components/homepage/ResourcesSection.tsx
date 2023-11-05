@@ -17,84 +17,75 @@ interface Resource {
   title: string;
   description: string;
   image: string;
-  duration: string;
 }
 
 const DSA_RESOURCES: Resource[] = [
 
   {
-    url: '/dsa-level-0/basics/basics1',
+    url: '/docs/dsa/dsa-level-0/expressions/expressions-i',
     type: 'blog',
     title: 'DSA-Level-0',
     description:
       'Some info regarding course and its contents',
     image:
       'https://algorithmicaonline.com/images/course/1596793516TOP 20 ADVANCED JAVA.png',
-    duration: '3 min',
   },
   {
-    url: '/dsa-level-1/basics/basics1',
+    url: '/docs/dsa/dsa-level-1/expressions/expressions-i',
     type: 'blog',
     title: 'DSA-Level-1',
     description:
       "Some info regarding course and its contents",
     image:
       'https://algorithmicaonline.com/images/course/1596570363TOP 20 ADVANCED PYTHON.png',
-    duration: '10 min',
   },
   {
-    url: '/dsa-level-1/basics/basics1',
+    url: '/docs/dsa/dsa-level-2/expressions/expressions-i',
     type: 'blog',
     title: 'DSA-Level-2',
     description:
       "Some info regarding course and its contents",
     image:
       'https://algorithmicaonline.com/images/course/1596570363TOP 20 ADVANCED PYTHON.png',
-    duration: '10 min',
   },
   {
-    url: '/dsa-level-1/basics/basics1',
+    url: '/docs/dsa/dsa-level-3/expressions/expressions-i',
     type: 'blog',
     title: 'DSA-Level-3',
     description:
       "Some info regarding course and its contents",
     image:
       'https://algorithmicaonline.com/images/course/1596570363TOP 20 ADVANCED PYTHON.png',
-    duration: '10 min',
   },
   {
-    url: '/dsa-level-1/basics/basics1',
+    url: '/docs/dsa/dsa-level-4/expressions/expressions-i',
     type: 'blog',
     title: 'DSA-Level-4',
     description:
       "Some info regarding course and its contents",
     image:
       'https://algorithmicaonline.com/images/course/1596570363TOP 20 ADVANCED PYTHON.png',
-    duration: '10 min',
   },
 ];
 const AI_RESOURCES: Resource[] = [
-
   {
-    url: '/dsa-level-1/basics/basics1',
+    url: '/docs/ml/ai-ml-0/sample/sample-i',
+    type: 'blog',
+    title: 'AI-ML-0',
+    description:
+      "Some info regarding course and its contents",
+    image:
+      'https://algorithmicaonline.com/images/course/1596639591MACHINE LEARNING.png',
+  },
+  {
+    url: '/docs/ml/ai-ml-1/sample/sample-i',
     type: 'blog',
     title: 'AI-ML-1',
     description:
       'Some info regarding course and its contents',
     image:
       'https://algorithmicaonline.com/images/course/1596625504LANGUAGE PYTHON AI.png',
-    duration: '3 min',
   },
-  {
-    url: '/dsa-level-1/basics/basics1',
-    type: 'blog',
-    title: 'AI-ML-2',
-    description:
-      "Some info regarding course and its contents",
-    image:
-      'https://algorithmicaonline.com/images/course/1596639591MACHINE LEARNING.png',
-    duration: '10 min',
-  }
 ];
 
 
@@ -104,7 +95,6 @@ function Resource({
   image,
   title,
   description,
-  duration,
 }: Resource) {
   return (
     <Link
@@ -125,11 +115,6 @@ function Resource({
           {title}
         </h3>
         <p className="leading-snug text-text-400">{description}</p>
-      </div>
-      <div className="mt-4 flex items-center justify-between">
-        <div className="text-sm text-text-400">
-          {`${duration} ${type === 'Video' ? 'watch' : 'read'}`}
-        </div>
       </div>
     </Link>
   );

@@ -26,14 +26,6 @@ const PRODUCTS = [
     darkImage: '/static/landing-page/hero/voice-graphic-dark.png',
     text: 'Some demo paragraph describing regarding courses and some title cards with some basic information',
   },
-  {
-    title: 'Online/Live sessions',
-    link: '/guides/livestream/livestream-overview',
-    icon: LiveRegular,
-    lightImage: '/static/landing-page/hero/livestream-graphic.png',
-    darkImage: '/static/landing-page/hero/livestream-graphic-dark.png',
-    text: 'Some demo paragraph describing regarding courses and some title cards with some basic information',
-  }
 ];
 
 function HeroProduct({
@@ -91,7 +83,7 @@ Embark on an extraordinary coding odyssey with our groundbreaking course, "DSA t
         </div>
       </section>
 
-      <section className="mx-auto grid w-full max-w-8xl grid-cols-1  gap-6 px-4 md:grid-cols-3">
+      <section className="mx-auto grid w-full  grid-cols-1 grid-rows-1 gap-6 px-4 md:grid-cols-2" style={{ maxWidth: '83rem'}}>
         {PRODUCTS.map((product) => (
           <HeroProduct {...product} key={product.title} />
         ))}

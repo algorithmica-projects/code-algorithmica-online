@@ -12,11 +12,6 @@ const meta = {
 
 /** @type {import('@docusaurus/plugin-content-docs').Options[]} */
 const docs = [
-  {
-    id: 'dsa-level-1',
-    path: 'docs/dsa-level-1',
-    routeBasePath: '/dsa-level-1'
-  }
 ];
 
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
@@ -48,13 +43,20 @@ const tailwindPlugin = require('./plugins/tailwind-plugin.cjs');
 const docs_plugins = docs.map((doc) => create_doc_plugin(doc));
 
 const plugins = [
+  [
+    'docusaurus2-dotenv',
+    {
+      systemvars: true
+    },
+  ],
   tailwindPlugin,
   ...docs_plugins,
   webpackPlugin,
   [
     '@docusaurus/plugin-client-redirects',
-    {}
+    {},  
   ],
+
 ];
 
 const fs = require('fs');
@@ -84,13 +86,13 @@ const config = {
   
   plugins,
 
+
   trailingSlash: false,
   themes: ['@docusaurus/theme-live-codeblock'],
   clientModules: [require.resolve('./src/client/define-ui-kit.js')],
   scripts: [{ src: 'https://cdn.statuspage.io/se-v2.js' }],
 
   themeConfig:{
-    image: '/img/dyte-docs-card.png',
     colorMode: {
       defaultMode: 'light',
     },
@@ -110,13 +112,12 @@ const config = {
         width: '80px',
       },
       items: [
-
         {
-          label: 'Sign Up',
-          href: '#',
+          label: 'Support',
+          to: 'docs/support',
           position: 'right',
-          className: 'dev-portal-signup dev-portal-link',
-        },
+          className: 'navbar-book-demo'
+        }
       ],
     },
     footer: {
@@ -127,64 +128,7 @@ const config = {
         alt: 'Algorithamica',
         height: '36px',
       },
-      links: [
-        {
-          title: 'Product',
-          items: [
-            {
-              label: 'Demo',
-              href: 'https://app.dyte.io',
-            },
-            {
-              label: 'Developer Portal',
-              href: 'https://dev.dyte.io',
-            },
-            {
-              label: 'Pricing',
-              href: 'https://dyte.io/#pricing',
-            },
-          ],
-        },
-        {
-          title: 'Company',
-          items: [
-            {
-              label: 'About Us',
-              href: 'https://dyte.io',
-            },
-            {
-              label: 'Join Us',
-              href: 'https://dyte.freshteam.com/jobs',
-            },
-            {
-              label: 'Privacy Policy',
-              href: 'https://dyte.io/privacy-policy',
-            },
-            {
-              label: 'Contact Us',
-              href: 'https://dyte.io/contact',
-            },
-          ],
-        },
-        {
-          title: 'Resources',
-          items: [
-            {
-              label: 'Documentation',
-              href: '/',
-            },
-            {
-              label: 'Blog',
-              href: 'https://dyte.io/blog',
-            },
-            {
-              label: 'Community',
-              href: 'https://community.dyte.io',
-            },
-          ],
-        },
-      ],
-      copyright: 'Copyright © Dyte since 2023. All rights reserved.',
+      copyright: 'Copyright © Algorithamica since 2023. All rights reserved.',
     },
     prism: {
       theme: code_themes.light,
@@ -226,9 +170,9 @@ const config = {
         {
         docs: {
           sidebarPath: require.resolve('./sidebars-default.js'),
-          path: 'docs/dsa-level-0',
-          id: 'dsa-level-0',
-          routeBasePath: '/dsa-level-0',
+          
+          routeBasePath: '/docs/',
+          
           remarkPlugins: [math],
           rehypePlugins: [katex],
           breadcrumbs: true,
